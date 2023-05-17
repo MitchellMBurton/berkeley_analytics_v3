@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="version-display">
+      <span id="toggle-theme" class="toggle-dark-mode" onclick="toggleDarkMode()">Dark Mode</span>
+      <span class="prod">PROD</span>
+      <span class="version">v1.4.68</span>
+    </div>
+    <header>
+      <h1 id="main-header"></h1>
+    </header>
+    <div id="main-content">
+    </div>
+    <section id="licenses">
+      <h2 id="licenses-header"></h2>
+      <h3 id="licenses-subheader"></h3>
+      <table id="licenses-table" class="condensed-table">
+        <thead>
+          <tr>
+            <th>License Information</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    <section id="box-drawing">
+      <h2 id="box-drawing-header"></h2>
+      <table id="box-drawing-table" class="condensed-table">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Hex Code</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    <section id="character-boxes">
+      <h2 id="character-boxes-header"></h2>
+      <div class="character-box">
+      </div>
+    </section>
+    <section id="product-pricelist">
+      <h2 id="product-pricelist-header"></h2>
+      <p>Prices are subject to change.</p>
+      <table id="product-pricelist-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Package</th>
+            <th>SKU</th>
+            <th>Price</th>
+            <th>Checkout</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    <script src="data.js"></script>
+    <script src="table.js"></script>
+    <script src="common.js"></script>
+  </body>
+</html>
