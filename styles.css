@@ -80,7 +80,7 @@ body.dark-mode {
   background-color: #1E1E1E;
   color: white;
 }
-.toggle-dark-mode {
+/* .toggle-dark-mode {
   background-color: #1E1E1E;
   color: white;
   padding: 2px 6px;
@@ -90,6 +90,23 @@ body.dark-mode {
 body.dark-mode .toggle-dark-mode {
   background-color: white;
   color: #1E1E1E;
+} */
+
+.toggle-dark-mode,
+.prod,
+.version {
+  border: 1px solid black;
+  padding: 2px;
+  display: inline-block;
+}
+
+.dark-mode .toggle-dark-mode {
+  border-color: white;
+}
+
+.dark-mode .prod,
+.dark-mode .version {
+  border-color: white;
 }
 /* .condensed-table {
   table-layout: auto;
@@ -119,6 +136,26 @@ body.dark-mode .toggle-dark-mode {
   border: 1px solid black;
   padding: 2px;
   display: inline-block;
+}
+
+.dark-mode .license-number {
+  color: #000;
+}
+
+.positive {
+  background-color: #137752;
+  border: 1px solid black;
+  padding: 2px;
+  display: inline-block;
+  color: white;
+}
+
+.dark-mode .positive {
+  color: white;
+}
+
+.checkout {
+  padding-left: 10px;
 }
 
 @media (max-width: 767px) {

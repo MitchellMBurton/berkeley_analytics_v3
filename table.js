@@ -9,27 +9,6 @@ function populateTable(data, createRow) {
     return tbody;
   }
   
-//   function createTableRow(item) {
-//     const row = document.createElement('tr');
-//     const cell1 = row.insertCell(0);
-//     const cell2 = row.insertCell(1);
-//     cell1.textContent = item.character || item.label;
-//     cell2.textContent = item.hex || item.value;
-//     return row;
-//   }
-// function createTableRow(item) {
-//     const row = document.createElement("tr");
-//     const cell1 = row.insertCell(0);
-//     const cell2 = row.insertCell(1);
-//     cell1.textContent = item.label;
-//     cell2.textContent = item.value;
-  
-//     if (item.className) {
-//       cell2.classList.add(item.className);
-//     }
-  
-//     return row;
-//   }
 
 function createTableRow(item) {
     const row = document.createElement("tr");
@@ -57,11 +36,7 @@ function createTableRow(item) {
     return box;
   }
   
-  document.getElementById('box-drawing-table').appendChild(
-    populateTable(boxDrawingData, createTableRow)
-  );
-  
-  
+
   document.getElementById('licenses-table').appendChild(
     populateTable(licensesData, createTableRow)
   );
@@ -74,19 +49,27 @@ function createTableRow(item) {
     populateTable(productPricelistData, createPriceListRow)
   );
 
-// Add the new createPriceListRow function
-function createPriceListRow(item) {
-    const row = document.createElement('tr');
-    const keys = ['product', 'package', 'sku', 'price', "checkout"];
-  
-    keys.forEach((key) => {
-      const cell = row.insertCell();
-      cell.textContent = item[key];
-    });
-  
-    return row;
-  }
 
+function createPriceListRow(item) {
+  const row = document.createElement('tr');
+  const keys = ['product', 'package', 'sku', 'price', 'checkout'];
+
+  keys.forEach((key, index) => {
+    const cell = row.insertCell();
+
+    // Create an inner span and apply the positive class for the checkout column
+    if (key === 'checkout') {
+      const span = document.createElement('span');
+      span.textContent = item[key];
+      span.classList.add('positive');
+      cell.appendChild(span);
+    } else {
+      cell.textContent = item[key];
+    }
+  });
+
+  return row;
+}
 
 function createColumns(data) {
   const columnsContainer = document.createElement("div");
@@ -135,7 +118,6 @@ function renderHeaders() {
     document.getElementById("main-header").textContent = headersData.main;
     document.getElementById("licenses-header").textContent = headersData.licenses;
     document.getElementById("licenses-subheader").textContent = headersData.licensesSub;
-    document.getElementById("box-drawing-header").textContent = headersData.boxDrawing;
     document.getElementById("character-boxes-header").textContent = headersData.characterBoxes;
     document.getElementById("product-pricelist-header").textContent = headersData.productPricelist;
     document.getElementById("sample-header").textContent = headersData.sample;
