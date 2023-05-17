@@ -9,15 +9,45 @@ function populateTable(data, createRow) {
     return tbody;
   }
   
-  function createTableRow(item) {
-    const row = document.createElement('tr');
+//   function createTableRow(item) {
+//     const row = document.createElement('tr');
+//     const cell1 = row.insertCell(0);
+//     const cell2 = row.insertCell(1);
+//     cell1.textContent = item.character || item.label;
+//     cell2.textContent = item.hex || item.value;
+//     return row;
+//   }
+// function createTableRow(item) {
+//     const row = document.createElement("tr");
+//     const cell1 = row.insertCell(0);
+//     const cell2 = row.insertCell(1);
+//     cell1.textContent = item.label;
+//     cell2.textContent = item.value;
+  
+//     if (item.className) {
+//       cell2.classList.add(item.className);
+//     }
+  
+//     return row;
+//   }
+
+function createTableRow(item) {
+    const row = document.createElement("tr");
     const cell1 = row.insertCell(0);
     const cell2 = row.insertCell(1);
-    cell1.textContent = item.character || item.label;
-    cell2.textContent = item.hex || item.value;
+    cell1.textContent = item.label;
+  
+    const span = document.createElement("span");
+    span.textContent = item.value;
+    cell2.appendChild(span);
+  
+    if (item.className) {
+      span.classList.add(item.className);
+    }
+  
     return row;
   }
-  
+
   function createCharacterBox(item) {
     const box = document.createElement('div');
     box.textContent = item.character;
@@ -30,6 +60,7 @@ function populateTable(data, createRow) {
   document.getElementById('box-drawing-table').appendChild(
     populateTable(boxDrawingData, createTableRow)
   );
+  
   
   document.getElementById('licenses-table').appendChild(
     populateTable(licensesData, createTableRow)

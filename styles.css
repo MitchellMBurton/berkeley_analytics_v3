@@ -114,6 +114,13 @@ body.dark-mode .toggle-dark-mode {
   white-space: nowrap;
 }
 
+.license-number {
+  background-color: #ffb700;
+  border: 1px solid black;
+  padding: 2px;
+  display: inline-block;
+}
+
 @media (max-width: 767px) {
   .condensed-table td {
     white-space: normal;
@@ -124,3 +131,4 @@ body.dark-mode .toggle-dark-mode {
   margin-left: 0;
   margin-right: auto;
 }
+
