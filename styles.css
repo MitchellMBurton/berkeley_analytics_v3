@@ -91,6 +91,36 @@ body.dark-mode .toggle-dark-mode {
   background-color: white;
   color: #1E1E1E;
 }
+/* .condensed-table {
+  table-layout: auto;
+} */
+
 .condensed-table {
   table-layout: auto;
+  max-width: 400px;
+  margin: auto;
+  width: auto; /* Add this line to make the table width auto */
+}
+
+.condensed-table th,
+.condensed-table td {
+  overflow-wrap: break-word; /* Add this line for wrapping text */
+  word-wrap: break-word; /* Add this line for compatibility with older browsers */
+}
+
+.condensed-table td {
+  padding: 3px; /* Adjust this value to make the table more condensed */
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .condensed-table td {
+    white-space: normal;
+  }
+}
+#licenses-table.condensed-table,
+#box-drawing-table.condensed-table {
+  margin-left: 0;
+  margin-right: auto;
 }

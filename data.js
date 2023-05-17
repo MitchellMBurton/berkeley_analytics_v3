@@ -98,6 +98,30 @@ const boxDrawingData = [
       },
     ];
 
+    // const introData = [
+    //     {
+    //       title: "Analytics interfaces for professionals.",
+    //       content:
+    //         "Graphics — Visual representation of data, as in design and manufacture, in typesetting, in graphic art and illustration; via a human-machine interface, as translation layer converting abstract concepts to the physical, relentlessly pursuing accurate and truthful interpretation. We confide our ethos, judgment, and execution in the fundamentals of graphics, its purpose, and its utility.",
+    //     },
+    //   ];
+      
+    //   const designPhilosophyData = [
+    //     "Emergent over prescribed aesthetics.",
+    //     "Expose state and inner workings.",
+    //     "Dense, not sparse.",
+    //     "Explicit is better than implicit.",
+    //     "Regiment functionalism.",
+    //     "Performance is design.",
+    //     "Verbosity over opaqueness.",
+    //     "Ignore design trends. Timeless and unfashionable.",
+    //     "Flat, not hierarchical.",
+    //     "Diametrically opposite of minimalism. As complex as it needs to be.",
+    //     "Driven by specifications and datasheets.",
+    //     "Beauty emerges automatically without deliberation.",
+    //     "Do not infantilize users.",
+    //   ];
+
     const headersData = {
         main: "Analytics",
         licenses: "Licenses",
