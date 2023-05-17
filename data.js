@@ -22,7 +22,7 @@ const boxDrawingData = [
     { label: 'Licensee', value: 'mitchmburton@gmail.com' },
     { label: 'Product', value: 'Berkeley Mono Typeface Trial' },
     { label: 'SKU', value: 'TX-01' },
-    { label: 'License #', value: 'JG5O-78MQ-7X79-V2LK' },
+    { label: 'License #', value: 'HG49-78MY-7GH9-V2K4' },
     { label: 'Seats', value: '1' },
     { label: 'Date created', value: '2023-05-13' },
     { label: 'Date issued', value: '2023-05-13' },
